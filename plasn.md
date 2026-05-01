@@ -1,111 +1,129 @@
 
 ---
 
-## வளர்ச்சி திட்டம் (Development Plan)
+## Development Plan
 
-### கட்டம் 1: ஆரம்ப Compiler (C)
+### Phase 1: Bootstrap Compiler (C)
 
-நோக்கம்:
-- Aaythamm மொழியில் எழுதப்பட்ட ஒரு எளிய நிரலை compile செய்து இயக்குதல்
+Goal: Compile minimal Aytham programs into native binaries.
 
-பகுதிகள்:
-- Lexer (token உருவாக்கம்)
-- Parser (AST உருவாக்கம்)
-- அடிப்படை AST
-- Semantic analysis
-- LLVM code generation
+Components:
+- Lexer (tokenization)
+- Parser (AST generation)
+- Basic AST structures
+- Minimal semantic analysis
+- Code generation (LLVM IR)
+
+Milestone:
+- Compile and execute a basic program
 
 ---
 
-### கட்டம் 2: அடிப்படை மொழி அம்சங்கள்
+### Phase 2: Core Language Features
 
-சேர்க்கப்படும் அம்சங்கள்:
+Goal: Enable practical programming.
+
+Add:
 - Primitive types
-- Variables
+- Variables and assignments
 - Expressions
-- Conditional statements (`என்றால்`)
+- Conditional statements
 - Loops
-- அடிப்படை library
+- Basic standard library (I/O)
 
 ---
 
-### கட்டம் 3: Memory & Safety
+### Phase 3: Memory and Safety Model
 
+Goal: Introduce safety guarantees.
+
+Add:
 - Ownership model
 - Move semantics
-- Borrowing (ஆரம்ப நிலை)
-- Lifetime checks
+- Borrowing (basic)
+- Lifetime validation (initial)
 
 ---
 
-### கட்டம் 4: Systems Programming
+### Phase 4: Systems Programming Support
 
+Goal: Enable low-level development.
+
+Add:
 - Structs
 - Pointers
 - Direct memory access
 - `no_std` mode
+- Minimal runtime
 
 ---
 
-### கட்டம் 5: Self-hosting
+### Phase 5: Self-Hosting
 
-- Compiler-ஐ Aaythamm-ல் எழுதுதல்
-- Aaythamm compiler → Aaythamm compiler compile செய்யும் நிலை
+Goal: Remove dependency on C.
+
+Steps:
+- Rewrite compiler in Aytham
+- Compile compiler using existing version
+- Transition to fully self-hosted toolchain
 
 ---
 
-### கட்டம் 6: Ecosystem
+### Phase 6: Ecosystem Expansion
 
+Goal: Build a usable ecosystem.
+
+Add:
 - Standard library
 - Package manager
-- Tools (formatter, linter)
+- Tooling (formatter, linter)
+- Documentation system
 
 ---
 
-### கட்டம் 7: நீண்டகால இலக்குகள்
+### Phase 7: Advanced Goals
 
-- Operating System development
-- Robotics & automation
-- CNC / Industrial systems
-- AI / ML runtime
-- LLM support
+Long-term objectives:
+- Operating system components
+- Embedded and robotics support
+- CNC and automation tooling
+- AI/ML runtime capabilities
+- LLM execution support
 
 ---
 
-## இலக்கு தளங்கள் (Target Platforms)
+## Target Platforms
 
-ஆரம்பம்:
+Initial:
 - Linux (x86_64)
 
-பின்னர்:
+Expansion:
 - Windows
-- ARM architectures
+- ARM (Linux, Android, iOS)
 - Embedded systems
 
 ---
 
-## சவால்கள்
+## Risks and Challenges
 
-- Compiler உருவாக்கத்தின் சிக்கல்
-- C-ல் memory bugs ஏற்படும் அபாயம்
-- Scope அதிகரிப்பு
-- Cross-platform compatibility
-
----
-
-## வழிகாட்டும் கொள்கைகள்
-
-- Core language எளிமையாக இருக்க வேண்டும்
-- தேவையற்ற abstraction தவிர்க்க வேண்டும்
-- Correctness > Features
-- Incremental development
-- நீண்டகால பராமரிப்பு
+- Complexity of compiler development
+- Memory safety issues in C bootstrap
+- Scope expansion beyond manageable limits
+- Maintaining language simplicity while adding features
+- Cross-platform compatibility challenges
 
 ---
 
-## முடிவு
+## Guiding Principles
 
-**ஆய்தம்** என்பது ஒரு நீண்டகால முயற்சி.  
-இது ஒரு முழுமையான, உயர் செயல்திறன் கொண்ட, தமிழ் அடிப்படையிலான systems programming language ஆக உருவாக்கப்படுகிறது.
+- Keep the core language minimal
+- Avoid unnecessary abstraction in early stages
+- Prioritize correctness over features
+- Build incrementally and validate each stage
+- Ensure long-term maintainability
 
-இந்த மொழி எதிர்காலத்தில் OS, hardware, மற்றும் AI துறைகளில் முக்கிய பங்கு வகிக்கும் வகையில் வடிவமைக்கப்படுகிறது.
+---
+
+## Conclusion
+
+Aytham is a long-term effort to build a **Tamil-native, high-performance systems language**. The project prioritizes correctness, control, and extensibility, with a structured roadmap toward self-hosting, system-level programming, and advanced computing domains.

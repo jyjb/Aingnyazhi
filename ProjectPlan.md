@@ -5,7 +5,7 @@
 
 ### Phase 1: Bootstrap Compiler (C)
 
-Goal: Compile minimal Aytham programs into native binaries.
+Goal: Compile minimal Aingnyazhi programs into native binaries.
 
 Components:
 - Lexer (tokenization)
@@ -126,4 +126,4 @@ Expansion:
 
 ## Conclusion
 
-Aytham is a long-term effort to build a **Tamil-native, high-performance systems language**. The project prioritizes correctness, control, and extensibility, with a structured roadmap toward self-hosting, system-level programming, and advanced computing domains.
+Aingnyazhi is a long-term effort to build a **Tamil-native, high-performance systems language**. The project prioritizes correctness, control, and extensibility, with a structured roadmap toward self-hosting, system-level programming, and advanced computing domains.
